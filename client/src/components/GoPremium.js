@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer(props) {
+function SignUp(props) {
 
 //make sure links to are exact path
   return (
-    <div className="footer-box">
-    <h2>This is a Footer</h2>
-    </div>
+    <h2>Access Premium Content Here</h2>
   );
 }
 
-export default Footer;
+export default SignUp;
