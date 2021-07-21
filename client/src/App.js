@@ -1,25 +1,48 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import SignUp from "./components/SignUp";
+import Nav from "./components/Nav"
+import LogIn from "./components/LogIn"
+import SearchBar from "./components/SearchBar"
+import Carousel from "./components/Carousel"
+import SearchResults from "./components/SearchResults"
+import GoPremium from "./components/GoPremium"
+import Footer from "./components/Footer"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    function App() {
+      return (
+        <div class="renderApp">
+        {/* <ApolloProvider client={client}> */}
+          <Router>
+            <div>
+              {/* <StoreProvider> */}
+                <Nav />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/login" component={LogIn} />
+                  <Route exact path="/signup" component={SignUp} />
+                  <Route exact path="/gopremium" component={GoPremium} />
+                  <Route exact path="/searchbar" component={SearchBar} />
+                  <Route exact path="/carosel" component={Carousel} />
+                  <Route exact path="/SearchResults" component={SearchResults} />
+                  {/* <Route component={NoMatch} /> */}
+                </Switch>
+              {/* </StoreProvider> */}
+            </div>
+            <Footer />
+          </Router>
+        {/* </ApolloProvider> */}
+        </div>
   );
 }
+
+const Home = () => (
+  <div>
+    <h4 className="center">Welcome. This is a description of the website</h4>
+  </div>
+);
+
 
 export default App;
