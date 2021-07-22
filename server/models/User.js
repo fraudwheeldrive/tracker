@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const Order = require('./Show');
+const Show = require('./Show');
 // type User {  from typedefs
 //   _id: ID
 //   userName: String
