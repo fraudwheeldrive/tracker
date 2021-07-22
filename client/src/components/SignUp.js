@@ -29,6 +29,7 @@ function Signup(props) {
   };
 
   return (
+
     <div className="box-center">
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
@@ -69,6 +70,7 @@ function Signup(props) {
         </div>
       </form>
     </div>
+
   );
 
 }
