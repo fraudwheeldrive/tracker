@@ -6,7 +6,7 @@ function SignUp(props) {
 //make sure links to are exact path
   return (
     <form>
-    <h2>Sign Up</h2>
+    <h2>Sign Up</h2>pul
     <div className="form-group">
         <label>First name</label>
         <input type="text" className="form-control" placeholder="First name" />
