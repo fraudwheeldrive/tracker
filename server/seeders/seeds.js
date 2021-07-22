@@ -1,3 +1,6 @@
+// needs to be adjusted to match our naming conventions. 
+
+
 const faker = require('faker');
 
 const db = require('../config/connection');

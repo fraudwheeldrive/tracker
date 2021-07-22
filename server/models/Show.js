@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { Schema, model } = require('mongoose');
 
 const showSchema = new Schema({
@@ -41,3 +42,25 @@ module.exports = showSchema;
 // time = times 
 // whereIsItStreamed = streamingService
 // image = image 
+=======
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
+
+const orderSchema = new Schema({
+  purchaseDate: {
+    type: Date,
+    default: Date.now
+  },
+  products: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Product'
+    }
+  ]
+});
+
+const Order = mongoose.model('Order', orderSchema);
+
+module.exports = Order;
+>>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4

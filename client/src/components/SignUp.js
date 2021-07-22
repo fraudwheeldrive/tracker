@@ -1,35 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMutation } from '@apollo/react-hooks';
+import Auth from "../utils/auth";
+import { ADD_USER } from "../utils/mutations";
 
-function SignUp(props) {
+function Signup(props) {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [addUser] = useMutation(ADD_USER);
 
-//make sure links to are exact path
+  const handleFormSubmit = async event => {
+    event.preventDefault();
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email, password: formState.password,
+        userName: formState.userName
+      }
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
+  };
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value
+    });
+  };
+
   return (
-    <form>
-    <h2>Sign Up</h2>
-    <div className="form-group">
-        <label>First name</label>
-        <input type="text" className="form-control" placeholder="First name" />
+
+    <div className="box-center">
+      <h2>Signup</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="userName">Username:</label>
+          <input
+            placeholder="Username Here"
+            name="userName"
+            type="userName"
+            id="userName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
+          <input
+            placeholder="youremail@test.com"
+            name="email"
+            type="email"
+            id="email"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row flex-end">
+          <button type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
 
-    <div className="form-group">
-        <label>Last name</label>
-        <input type="text" className="form-control" placeholder="Last name" />
-    </div>
-
-    <div className="form-group">
-        <label>Email address</label>
-        <input type="email" className="form-control" placeholder="Enter email" />
-    </div>
-
-    <div className="form-group">
-        <label>Password</label>
-        <input type="password" className="form-control" placeholder="Enter password" />
-    </div>
-
-    <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
-</form>
   );
+
 }
 
-export default SignUp;
+export default Signup;

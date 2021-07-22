@@ -10,14 +10,29 @@ import SearchResults from "./components/SearchResults"
 import GoPremium from "./components/GoPremium"
 import Footer from "./components/Footer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ApolloProvider } from '@apollo/react-hooks';
+import { StoreProvider } from "./utils/GlobalState";
+import ApolloClient from 'apollo-boost';
 
+
+const client = new ApolloClient({
+  request: (operation) => {
+    const token = localStorage.getItem('id_token')
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : ''
+      }
+    })
+  },
+  uri: '/graphql',
+})
     function App() {
       return (
         <div class="renderApp">
-        {/* <ApolloProvider client={client}> */}
+        <ApolloProvider client={client}>
           <Router>
             <div>
-              {/* <StoreProvider> */}
+              <StoreProvider>
                 <Nav />
                 <Switch>
                   <Route exact path="/" component={Home} />
@@ -29,11 +44,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
                   <Route exact path="/SearchResults" component={SearchResults} />
                   {/* <Route component={NoMatch} /> */}
                 </Switch>
-              {/* </StoreProvider> */}
+              </StoreProvider>
             </div>
             <Footer />
           </Router>
-        {/* </ApolloProvider> */}
+        </ApolloProvider>
         </div>
   );
 }
