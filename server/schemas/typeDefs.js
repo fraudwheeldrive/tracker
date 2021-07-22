@@ -20,20 +20,24 @@ type Show {
     wishList: [Show]
     isPremium: Boolean
   }  
+
   type Auth {
     token: ID
     user: User
   }
 
   type Query {
-      users: [User]
-      user(userName: String!):User
+    me: User
+    users: [User]
+    user(userName: String!): User
+    shows(userName: String): [Show]
+
   }
 
   type Mutation {
+    login(email: String!, password: String!): Auth
     addUser(userName: String!, email: String!, password: String!): Auth
     updateUser(userName: String, email: String, password: String): User
-    login(email: String!, password: String!): Auth
   }
 `;
 
@@ -48,4 +52,8 @@ module.exports = typeDefs;
 
 // type Query {
 //     helloWorld: String
+//   }
+// type Query {
+//     shows: [show]
+//     show(showName: String!):Show
 //   }

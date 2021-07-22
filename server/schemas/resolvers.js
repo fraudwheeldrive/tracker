@@ -4,41 +4,47 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-
-  },
-  Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
-      const token = signToken(user);
-
-      return { token, user };
-    },
-
-    updateUser: async (parent, args, context) => {
+    me: async (parent, args, context) => {
       if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+        const userData = await User.findOne({ _id: context.user._id })
+          .select('-__v -password')
+          .populate('shows');
+
+        return userData;
       }
 
       throw new AuthenticationError('Not logged in');
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    Mutation: {
+      addUser: async (parent, args) => {
+        const user = await User.create(args);
+        const token = signToken(user);
 
-      if (!user) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
+        return { token, user };
+      },
 
-      const correctPw = await user.isCorrectPassword(password);
+      updateUser: async (parent, args, context) => {
+        if (context.user) {
+          return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+        }
 
-      if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
-      }
-
-      const token = signToken(user);
-
-      return { token, user };
+        throw new AuthenticationError('Not logged in');
+      },
+      login: async (parent, { email, password }) => {
+        const user = await User.findOne( { email });
+        if (!user) {
+            throw new AuthenticationError('Something is wrong, please try again')
+        }
+        const ifCorrectPass = await user.isCorrectPassword(password);
+        if(!ifCorrectPass) {
+            throw new AuthenticationError('Something is wrong, please try again')
+        }
+        const token = signToken(user);
+        return { token, user };
+    },
     }
   }
 };
 
-module.exports = resolvers;
+
+  module.exports = resolvers;
