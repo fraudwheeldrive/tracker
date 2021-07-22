@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { Schema, model } = require('mongoose');
 
 const showSchema = new Schema({
@@ -43,6 +44,8 @@ module.exports = showSchema;
 // whereIsItStreamed = streamingService
 // image = image 
 =======
+=======
+>>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
@@ -62,5 +65,9 @@ const orderSchema = new Schema({
 
 const Order = mongoose.model('Order', orderSchema);
 
+<<<<<<< HEAD
+module.exports = Order;
+>>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4
+=======
 module.exports = Order;
 >>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4
