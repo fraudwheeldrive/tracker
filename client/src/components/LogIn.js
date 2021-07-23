@@ -30,7 +30,7 @@ function Signup(props) {
 
   return (
     <div className="box-center">
-      <h2>Signup</h2>
+      <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="userName">Username:</label>
