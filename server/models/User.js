@@ -13,7 +13,7 @@ const Show = require('./Show');
 //   isPremium: Boolean
 // }  
 const userSchema = new Schema({
-  userName: {
+  username: {
     type: String,
     required: true,
     trim: true
