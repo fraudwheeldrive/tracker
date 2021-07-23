@@ -5,7 +5,10 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    password: String
     shows: [Show]
+    wishlist: [Show]
+    ispremium: Boolean
   }
 
   type Show {
@@ -32,7 +35,6 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addShow(showText: String!): Show
-
   }
 `;
 
