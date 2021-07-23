@@ -38,6 +38,7 @@ type Show {
     login(email: String!, password: String!): Auth
     addUser(userName: String!, email: String!, password: String!): Auth
     updateUser(userName: String, email: String, password: String): User
+    updateShow(_id: ID!, )
   }
 `;
 
