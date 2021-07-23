@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 const { Schema, model } = require('mongoose');
 
 const showSchema = new Schema({
@@ -36,38 +36,13 @@ const showSchema = new Schema({
 module.exports = showSchema; 
 
 
-// Show = showSchema 
-// showName = showName
-// seasons = seasons
-// description = descriptions
-// time = times 
-// whereIsItStreamed = streamingService
-// image = image 
-=======
-=======
->>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4
-const mongoose = require('mongoose');
+// // Show = showSchema 
+// // showName = showName
+// // seasons = seasons
+// // description = descriptions
+// // time = times 
+// // whereIsItStreamed = streamingService
 
-const { Schema } = mongoose;
 
-const orderSchema = new Schema({
-  purchaseDate: {
-    type: Date,
-    default: Date.now
-  },
-  products: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Product'
-    }
-  ]
-});
 
-const Order = mongoose.model('Order', orderSchema);
 
-<<<<<<< HEAD
-module.exports = Order;
->>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4
-=======
-module.exports = Order;
->>>>>>> 4f08805d59091be650150619213cb9a1f74d4de4
