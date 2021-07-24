@@ -17,7 +17,7 @@ const Login = props => {
       [name]: value
     });
   };
-  
+
   // submit form
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -26,6 +26,8 @@ const Login = props => {
       const { data } = await login({
         variables: { ...formState }
       });
+
+
 
       Auth.login(data.login.token);
     } catch (e) {
