@@ -9,7 +9,10 @@ const Home = () => {
     //make sure links to are exact path
     return (
       <div className="home-box">
-        <h4 className="center">Logged in!  Welcome. This is a description of the website</h4>
+        <h3 className="center">Logged in!  Welcome. This is a description of the website</h3>
+        <h4>Watched Movies and Shows</h4>
+        <div className="watched-box"></div>
+        <h4>Wishlist Movies and Shows</h4>
       </div>
     );
   }
