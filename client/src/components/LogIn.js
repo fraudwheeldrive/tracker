@@ -38,11 +38,6 @@ const Login = props => {
       password: ''
     });
   };
-
-
-      </div>
-    </main>
-  );
 };
 
 export default Login;
