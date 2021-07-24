@@ -38,7 +38,7 @@
 }
 
 .navbar {
-  background-color: #333;
+  background-color: rgb(2, 0, 0);
   overflow: hidden;
 }
 
@@ -58,8 +58,9 @@ justify-content: center;
 
 /* Change the color of links on hover */
 .nav-text:hover {
-  background-color: rgb(129, 103, 161);
+  background-color: rgb(95, 241, 217);
   color: black;
+  border-radius: 15px;
 }
 
 /* Add a color to the active/current link */
@@ -73,7 +74,7 @@ justify-content: center;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:#333;
+    background-color:rgb(2, 0, 0);
     color: white;
     text-align: center;
 }
@@ -83,4 +84,17 @@ justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.search-results {
+  background-color: bisque;
+  margin: 10vw;
+}
+
+.search-results h2 {
+ color: black;
+}
+
+.padding {
+  padding-left: 10px;
 }
