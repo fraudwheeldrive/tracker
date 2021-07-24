@@ -40,7 +40,7 @@ const client = new ApolloClient({
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
                   <Route exact path="/searchbar" component={SearchBar} />
-                  <Route exact path="/carosel" component={Carousel} />
+                  <Route exact path="/carousel" component={Carousel} />
                   <Route exact path="/SearchResults" component={SearchResults} />
                   {/* <Route component={NoMatch} /> */}
                 </Switch>
