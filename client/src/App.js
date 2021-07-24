@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { StoreProvider } from "./utils/GlobalState";
 import ApolloClient from 'apollo-boost';
-
+import Home from "./pages/Home"
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -53,11 +53,6 @@ const client = new ApolloClient({
   );
 }
 
-const Home = () => (
-  <div>
-    <h4 className="center">Welcome. This is a description of the website</h4>
-  </div>
-);
 
 
 export default App;
