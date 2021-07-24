@@ -40,9 +40,7 @@ const Login = props => {
   };
 
 
-      </div>
-    </main>
-  );
+
 };
 
 export default Login;
