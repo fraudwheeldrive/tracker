@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "if-env": "^1.0.4",
-    "react-bootstrap": "^1.6.1"
+    "react-bootstrap": "^1.6.1",
+    "react-icon": "^1.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
