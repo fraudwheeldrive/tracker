@@ -35,13 +35,14 @@ function App() {
           <div>
             <StoreProvider>
               <Nav />
+              
               <Switch>
-                <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={LogIn} />
                 <Route exact path="/signup" component={SignUp} />
                 <Route exact path="/gopremium" component={GoPremium} />
                 <Route exact path="/searchbar" component={SearchShows} />
-                <Route exact path="/carosel" component={Carousel} />
+                <Route exact path="/carousel" component={Carousel} />
                 <Route exact path="/SearchResults" component={SearchResults} />
                 {/* <Route component={NoMatch} /> */}
               </Switch>
