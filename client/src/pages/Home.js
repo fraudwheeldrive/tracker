@@ -6,7 +6,7 @@ import SearchResults from "../components/SearchResults";
 import Carousel from "../components/Carousel";
 
 function Home(props) {
-  var watchLogo = require('../assets/img/watchlogo-01.png')
+  var watchLogo = require('../assets/img/watchlogo-01-01.png')
   //make sure links to are exact path
   return (
     <div className="home-box box-center">
