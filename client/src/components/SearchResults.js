@@ -5,7 +5,9 @@ function SearchResults(props) {
 
 //make sure links to are exact path
   return (
-    <h2>This is the search results area</h2>
+    <div className="search-results box-center">
+    <h2>Search Results</h2>
+    </div>
   );
 }
 

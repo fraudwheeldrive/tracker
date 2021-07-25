@@ -5,7 +5,7 @@ function Carousel(props) {
 
 //make sure links to are exact path
   return (
-    <h2>This is a Nav</h2>
+    <h2 className="box-center">Carousel area : Accept Andrew's incoming code and delete this</h2>
   );
 }
 

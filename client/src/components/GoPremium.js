@@ -1,12 +1,20 @@
-import React from "react";
+//login backup
+
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMutation } from '@apollo/react-hooks';
+import Auth from "../utils/auth";
+import { ADD_USER } from "../utils/mutations";
 
-function SignUp(props) {
+function GoPremium(props) {
 
-//make sure links to are exact path
+
   return (
-    <h2>Access Premium Content Here</h2>
+    <div className="box-center">
+      <h2>Access premium content here</h2>
+    </div>
   );
+
 }
 
-export default SignUp;
+export default GoPremium;

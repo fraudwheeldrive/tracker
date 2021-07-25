@@ -1,48 +1,86 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import './app.css';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/react-hooks';
+import { LOGIN_USER } from '../utils/mutations';
+import UserLoggedIn from '../pages/UserLoggedIn';
+import Auth from '../utils/auth';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ReactDOM from 'react-dom';
 
+const Login = props => {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN_USER);
 
-function LogIn(props) {
+  // update state based on form input changes
+  const handleChange = event => {
+    const { name, value } = event.target;
 
-//make sure links to are exact path
+    setFormState({
+      ...formState,
+      [name]: value
+    });
+  };
+
+  // submit form
+  const handleFormSubmit = async event => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      });
+      Auth.login(data.login.token);
+      ReactDOM.render(
+        <React.StrictMode>
+        <UserLoggedIn />
+        </React.StrictMode>
+      )
+    } catch (e) {
+      console.error(e);
+    }
+
+    // clear form values
+    setFormState({
+      email: '',
+      password: ''
+    });
+  };
+
   return (
-    <form>
- <h2>Log In</h2>
-    <label>
-      <p>Username</p>
-      <input type="text" />
-    </label>
-    <label>
-      <p>Password</p>
-      <input type="password" />
-    </label>
-    <div>
-      <button type="submit">Submit</button>
-    </div>
-  </form>
-  );
-}
+    <main className="flex-row justify-center mb-4">
+      <div className="col-12 col-md-6">
+        <div className="card">
+          <h4 className="card-header">Login</h4>
+          <div className="card-body">
+            <form onSubmit={handleFormSubmit}>
+              <input
+                className="form-input"
+                placeholder="Your email"
+                name="email"
+                type="email"
+                id="email"
+                value={formState.email}
+                onChange={handleChange}
+              />
+              <input
+                className="form-input"
+                placeholder="******"
+                name="password"
+                type="password"
+                id="password"
+                value={formState.password}
+                onChange={handleChange}
+              />
+              <button className="btn d-block w-100" type="submit">
+                Submit
+              </button>
+            </form>
 
-export default LogIn;
-
-
-import React from 'react';
-
-export default function Login() {
-  return(
-    <form>
-      <label>
-        <p>Username</p>
-        <input type="text" />
-      </label>
-      <label>
-        <p>Password</p>
-        <input type="password" />
-      </label>
-      <div>
-        <button type="submit">Submit</button>
+            {error && <div>Login failed</div>}
+          </div>
+        </div>
       </div>
-    </form>
-  )
-}
+    </main>
+  );
+};
+
+export default Login;
