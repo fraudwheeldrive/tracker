@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
-
+import UserLoggedIn from '../pages/UserLoggedIn';
 import Auth from '../utils/auth';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ReactDOM from 'react-dom';
 
 const Login = props => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -26,8 +28,12 @@ const Login = props => {
       const { data } = await login({
         variables: { ...formState }
       });
-
       Auth.login(data.login.token);
+      ReactDOM.render(
+        <React.StrictMode>
+        <UserLoggedIn />
+        </React.StrictMode>
+      )
     } catch (e) {
       console.error(e);
     }

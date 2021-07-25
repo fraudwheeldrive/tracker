@@ -6,8 +6,7 @@ function SearchResults(props) {
 //make sure links to are exact path
   return (
     <div className="search-results box-center">
-    <h2>Watched</h2>
-    <h2>Shows To Watch</h2>
+    <h2>Search Results</h2>
     </div>
   );
 }

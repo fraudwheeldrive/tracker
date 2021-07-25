@@ -4,7 +4,7 @@ import React from 'react';
 import SignUp from "./components/SignUp";
 import Nav from "./components/Nav"
 import LogIn from "./components/LogIn"
-import SearchBar from "./components/SearchBar"
+import SearchShows from "./components/SearchShows"
 import Carousel from "./components/Carousel"
 import SearchResults from "./components/SearchResults"
 import GoPremium from "./components/GoPremium"
@@ -40,7 +40,7 @@ function App() {
                 <Route exact path="/login" component={LogIn} />
                 <Route exact path="/signup" component={SignUp} />
                 <Route exact path="/gopremium" component={GoPremium} />
-                <Route exact path="/searchbar" component={SearchBar} />
+                <Route exact path="/searchbar" component={SearchShows} />
                 <Route exact path="/carosel" component={Carousel} />
                 <Route exact path="/SearchResults" component={SearchResults} />
                 {/* <Route component={NoMatch} /> */}
