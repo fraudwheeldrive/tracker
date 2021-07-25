@@ -4,7 +4,7 @@ import React from 'react';
 import SignUp from "./components/SignUp";
 import Nav from "./components/Nav"
 import LogIn from "./components/LogIn"
-import SearchBar from "./components/SearchBar"
+import SearchShows from "./components/SearchShows"
 import Carousel from "./components/Carousel"
 import SearchResults from "./components/SearchResults"
 import GoPremium from "./components/GoPremium"
@@ -13,8 +13,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { StoreProvider } from "./utils/GlobalState";
 import ApolloClient from 'apollo-boost';
-import Home from "./pages/Home";
-import IntroPage from "./pages/IntroPage";
+import Home from './pages/Home'
+
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -27,33 +27,34 @@ const client = new ApolloClient({
   },
   uri: '/graphql',
 })
-    function App() {
-      return (
-        <div className="renderApp">
-        <ApolloProvider client={client}>
-          <Router>
-            <div>
-              <StoreProvider>
-                <Nav />
-                <Switch>
-                  <Route exact path="/" component={IntroPage} />
-                  <Route exact path="/home" component={Home} />
-                  <Route exact path="/login" component={LogIn} />
-                  <Route exact path="/signup" component={SignUp} />
-                  <Route exact path="/gopremium" component={GoPremium} />
-                  <Route exact path="/searchbar" component={SearchBar} />
-                  <Route exact path="/carosel" component={Carousel} />
-                  <Route exact path="/SearchResults" component={SearchResults} />
-                  {/* <Route component={NoMatch} /> */}
-                </Switch>
-              </StoreProvider>
-            </div>
-            <Footer />
-          </Router>
-        </ApolloProvider>
-        </div>
+function App() {
+  return (
+    <div className="renderApp">
+      <ApolloProvider client={client}>
+        <Router>
+          <div>
+            <StoreProvider>
+              <Nav />
+              
+              <Switch>
+              <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={LogIn} />
+                <Route exact path="/signup" component={SignUp} />
+                <Route exact path="/gopremium" component={GoPremium} />
+                <Route exact path="/searchbar" component={SearchShows} />
+                <Route exact path="/carousel" component={Carousel} />
+                <Route exact path="/SearchResults" component={SearchResults} />
+                {/* <Route component={NoMatch} /> */}
+              </Switch>
+            </StoreProvider>
+          </div>
+          <Footer />
+        </Router>
+      </ApolloProvider>
+    </div>
   );
 }
+
 
 
 

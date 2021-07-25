@@ -1,20 +1,21 @@
-import React from 'react';
-import Auth from '../utils/auth';
-import { useQuery } from '@apollo/react-hooks';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import SearchShows from "../components/SearchShows";
+import SearchResults from "../components/SearchResults";
+import Carousel from "../components/Carousel";
 
-const Home = () => {
-  const loggedIn = Auth.loggedIn();
+function Home(props) {
+  var watchLogo = require('../assets/img/watchlogo-01-01.png')
+  //make sure links to are exact path
+  return (
+    <div className="home-box box-center">
+      <SearchShows />
+      <img className="logo-box" src={watchLogo} />
+      <Carousel />
+      <SearchResults />
+    </div>
+  );
+}
 
-
-    //make sure links to are exact path
-    return (
-      <div className="home-box">
-        <h3 className="center">Logged in!  Welcome. This is a description of the website</h3>
-        <h4>Watched Movies and Shows</h4>
-        <div className="watched-box"></div>
-        <h4>Wishlist Movies and Shows</h4>
-      </div>
-    );
-  }
-  
-  export default Home;
+export default Home;
