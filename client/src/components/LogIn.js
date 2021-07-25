@@ -1,76 +1,48 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
-import Auth from "../utils/auth";
-import { ADD_USER } from "../utils/mutations";
+import { LOGIN_USER } from '../utils/mutations';
 
-function Signup(props) {
+import Auth from '../utils/auth';
+
+const Login = props => {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser] = useMutation(ADD_USER);
+  const [login, { error }] = useMutation(LOGIN_USER);
 
-  const handleFormSubmit = async event => {
-    event.preventDefault();
-    const mutationResponse = await addUser({
-      variables: {
-        email: formState.email, password: formState.password,
-        userName: formState.userName
-      }
-    });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
-  };
-
+  // update state based on form input changes
   const handleChange = event => {
     const { name, value } = event.target;
+
     setFormState({
       ...formState,
       [name]: value
     });
   };
 
-  return (
-    <div className="box-center">
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="userName">Username:</label>
-          <input
-            placeholder="Username Here"
-            name="userName"
-            type="userName"
-            id="userName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex-row flex-end">
-          <button type="submit">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+  // submit form
+  const handleFormSubmit = async event => {
+    event.preventDefault();
+
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // clear form values
+    setFormState({
+      email: '',
+      password: ''
+    });
+  };
+
+
+      </div>
+    </main>
   );
+};
 
-}
-
-export default Signup;
+export default Login;

@@ -13,7 +13,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import { StoreProvider } from "./utils/GlobalState";
 import ApolloClient from 'apollo-boost';
-
+import Home from "./pages/Home";
+import IntroPage from "./pages/IntroPage";
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -35,7 +36,8 @@ const client = new ApolloClient({
               <StoreProvider>
                 <Nav />
                 <Switch>
-                  <Route exact path="/" component={Home} />
+                  <Route exact path="/" component={IntroPage} />
+                  <Route exact path="/home" component={Home} />
                   <Route exact path="/login" component={LogIn} />
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
@@ -53,11 +55,6 @@ const client = new ApolloClient({
   );
 }
 
-const Home = () => (
-  <div>
-    <h4 className="center">Welcome. This is a description of the website</h4>
-  </div>
-);
 
 
 export default App;
