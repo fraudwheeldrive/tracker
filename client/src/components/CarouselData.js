@@ -1,25 +1,25 @@
 
-// const apiKey = "b50a54473311bbac83f4a96b6efa872d"; 
-const apiURL =  `https://api.themoviedb.org/3/movie/top_rated?api_key=b50a54473311bbac83f4a96b6efa872d&language=en-US&total_results=10`;
+// // const apiKey = "b50a54473311bbac83f4a96b6efa872d"; 
+// const apiURL =  `https://api.themoviedb.org/3/movie/top_rated?api_key=b50a54473311bbac83f4a96b6efa872d&language=en-US&total_results=10`;
 
 
 
 
 
-// // (image.results.poster_path)
+// // // (image.results.poster_path)
 
 
-// run fetch,  map thru 
+// // run fetch,  map thru 
 
-//"https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster},
+// //"https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster},
 
-const posterUrl = 
+// const posterUrl = 
 
-const CarouselData
+// const CarouselData
 
-// &total_results 
+// // &total_results 
 
-// data.posterpath
+// // data.posterpath
 
 
 

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { MdAddShoppingCart } from "react-icons/md";
+const style = { color: "white", size:"50px" };
+
 function Nav(props) {
 
   //make sure links to are exact path
@@ -15,8 +18,12 @@ function Nav(props) {
         <Link to="/SignUp"><h3 className="nav-text">Sign Up</h3></Link>
 
         <Link to="/GoPremium"><h3 className="nav-text">Go Premium</h3></Link>
-
+        
+        
       </ul>
+
+      <MdAddShoppingCart style={style} />
+
     </div>
   );
 }
