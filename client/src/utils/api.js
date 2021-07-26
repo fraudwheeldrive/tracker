@@ -57,3 +57,6 @@ export const getMe = (token) => {
 export const SearchShows = (query) => {
     return fetch(`https://api.themoviedb.org/3/search/multi?api_key=b50a54473311bbac83f4a96b6efa872d&query=${query}&page=1`);
   };
+
+  
+  

@@ -34,6 +34,7 @@ if(!Array.isArray(slides) || slides.length <=0) {
             className={index === current ? 'slide active' : 'slide'} 
             key={index}
             > 
+
             {index === current && (
             <img src={slide.image} alt = "movie" className = 'image'/>
             )} 
