@@ -5,9 +5,7 @@ import React from 'react';
 import SignUp from "./components/SignUp";
 import NavBar from "./components/Nav"
 import LogIn from "./components/LogIn"
-import SearchShows from "./components/SearchShows"
 import Carousel from "./components/Carousel"
-import SearchResults from "./components/SearchResults"
 import GoPremium from "./components/GoPremium"
 import Footer from "./components/Footer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -15,6 +13,8 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { StoreProvider } from "./utils/GlobalState";
 import ApolloClient from 'apollo-boost';
 import Home from './pages/Home'
+import SearchBar from './components/SearchBar';
+
 
 
 
@@ -31,6 +31,7 @@ const client = new ApolloClient({
   uri: '/graphql',
 })
 function App() {
+<<<<<<< HEAD
   return (
     <div className="renderApp">
       <ApolloProvider client={client}>
@@ -38,24 +39,56 @@ function App() {
           <div>
             <StoreProvider>
               <NavBar />
+=======
+
+    return (
+      <div className="renderApp">
+        <ApolloProvider client={client}>
+          <Router>
+            <div>
+              <StoreProvider>
+                <NavBar />
+                <SearchBar />
+                <Home />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/login" component={LogIn} />
+                  <Route exact path="/signup" component={SignUp} />
+                  <Route exact path="/gopremium" component={GoPremium} />
+                  <Route exact path="/carousel" component={Carousel} />
+                  {/* <Route component={NoMatch} /> */}
+                </Switch>
+              </StoreProvider>
+            </div>
+            <Footer />
+          </Router>
+        </ApolloProvider>
+      </div>
+    );
+  //   <div className="renderApp">
+  //     <ApolloProvider client={client}>
+  //       <Router>
+  //         <div>
+  //           <StoreProvider>
+  //             <Nav />
+>>>>>>> d61c3137ebf18141480a483dcd8e8cc771248bcc
               
-              <Switch>
-              <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={LogIn} />
-                <Route exact path="/signup" component={SignUp} />
-                <Route exact path="/gopremium" component={GoPremium} />
-                <Route exact path="/searchbar" component={SearchShows} />
-                <Route exact path="/carousel" component={Carousel} />
-                <Route exact path="/SearchResults" component={SearchResults} />
-                {/* <Route component={NoMatch} /> */}
-              </Switch>
-            </StoreProvider>
-          </div>
-          <Footer />
-        </Router>
-      </ApolloProvider>
-    </div>
-  );
+  //             <SearchBar />
+  //             <Switch>
+  //               <Route exact path="/" component={Home} />
+  //               <Route exact path="/login" component={LogIn} />
+  //               <Route exact path="/signup" component={SignUp} />
+  //               <Route exact path="/gopremium" component={GoPremium} />
+  //               <Route exact path="/carousel" component={Carousel} />
+  //               {/* <Route component={NoMatch} /> */}
+  //             </Switch>
+  //           </StoreProvider>
+  //         </div>
+  //         <Footer />
+  //       </Router>
+  //     </ApolloProvider>
+  //   </div>
+  // );
 }
 
 

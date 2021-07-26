@@ -80,6 +80,11 @@ text-decoration: none;
 }
 
 /* Used for centering content */
+.box-center-2 {
+  display: flex;
+  justify-content: center;
+}
+
 .box-center {
   display: flex;
   flex-direction: column;
@@ -107,7 +112,7 @@ text-decoration: none;
 
 .slider {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,6 +154,7 @@ text-decoration: none;
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
+<<<<<<< HEAD
   transform: scale(1.08);
 }
 
@@ -157,4 +163,15 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
+=======
+  transform: scale(.4);
+  height: 50vh;
+}
+
+.home-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+>>>>>>> d61c3137ebf18141480a483dcd8e8cc771248bcc
 }
