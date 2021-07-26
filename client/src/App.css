@@ -80,6 +80,11 @@ justify-content: center;
 }
 
 /* Used for centering content */
+.box-center-2 {
+  display: flex;
+  justify-content: center;
+}
+
 .box-center {
   display: flex;
   flex-direction: column;
@@ -107,7 +112,7 @@ justify-content: center;
 
 .slider {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,5 +154,13 @@ justify-content: center;
 .slide.active {
   opacity: 1;
   transition-duration: 1s;
-  transform: scale(1.08);
+  transform: scale(.4);
+  height: 50vh;
+}
+
+.home-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
 }
