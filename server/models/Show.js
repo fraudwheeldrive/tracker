@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
+  title:{
+    type: String,
+    required: true
+  },
   purchaseDate: {
     type: Date,
     default: Date.now
