@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import SearchShowsApi from '../utils/api'
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
-
+import Auth from '../utils/auth';
 
 const SearchBar = () => {
-
+const [searchedShows, setSearchedShows] = useState([]);
 const [searchInput, setSearchInput] = useState();
 // const apiCall = async () => {
 //     const response = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=b50a54473311bbac83f4a96b6efa872d&query=${searchInput}&page=1`);
@@ -13,6 +13,9 @@ const [searchInput, setSearchInput] = useState();
 // }
 
 var handleformsubmit = async (event) => {
+    
+
+
     event.preventDefault();
 
     if (!searchInput) {
@@ -34,6 +37,8 @@ var handleformsubmit = async (event) => {
         overview: show.overview
       }));
       console.log(showData)
+      
+      setSearchInput('');
       //where we will 
     } catch (err) {
       console.error(err);
@@ -52,7 +57,7 @@ var handleformsubmit = async (event) => {
                 <Form.Control
                   name='searchInput'
                   value={searchInput}
-                  onSubmit={(e) => setSearchInput(e.target.value)}
+                  onChange={(e) => setSearchInput(e.target.value)}
                   type='text'
                   size='lg'
                   placeholder='Search for a show'
@@ -67,6 +72,33 @@ var handleformsubmit = async (event) => {
           </Form>
         </Container>
       </Jumbotron>
+
+      <Container>
+        <h2>
+          {searchedShows.length
+            ? `Viewing ${searchedShows.length} results:`
+            : 'Show results'}
+        </h2>
+        <CardColumns>
+          {searchedShows.map((show) => {
+            return (
+              <Card key={show.showId} border='dark'>
+                {show.image ? (
+                  <Card.Img src={show.image} alt={`The cover for ${show.title}`} variant='top' />
+                ) : null}
+                <Card.Body>
+                  <Card.Title>{show.title}</Card.Title>
+                  <p className='small'>Overview</p>
+                  <Card.Text>{show.description}</Card.Text>
+                  {Auth.loggedIn() && (
+                    <button type="submit">Submit</button>
+                  )}
+                </Card.Body>
+              </Card>
+            );
+          })}
+        </CardColumns>
+      </Container>
       </div>
     );
 }
