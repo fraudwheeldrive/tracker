@@ -1,6 +1,5 @@
 import React, { createContext, useContext } from "react";
 import { useProductReducer } from "./reducers";
-import SearchShows from "../components/SearchShows";
 const StoreContext = createContext();
 const { Provider } = StoreContext;
 //will be required for cart

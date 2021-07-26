@@ -80,6 +80,11 @@ justify-content: center;
 }
 
 /* Used for centering content */
+.box-center-2 {
+  display: flex;
+  justify-content: center;
+}
+
 .box-center {
   display: flex;
   flex-direction: column;
