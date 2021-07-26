@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import SearchShowsApi from '../utils/api'
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
 import Auth from '../utils/auth';
+import { saveShow, SearchShowsApi } from '../utils/api';
+import { saveShowIds, getSavedShowIds } from '../utils/GlobalState';
+
 
 const SearchBar = () => {
 const [searchedShows, setSearchedShows] = useState([]);
 const [searchInput, setSearchInput] = useState();
+const [savedShowIds, setSavedShowIds] = useState(getSavedShowIds());
 // const apiCall = async () => {
 //     const response = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=b50a54473311bbac83f4a96b6efa872d&query=${searchInput}&page=1`);
 //     const myJson = await response.json();
 //     console.log(myJson);
 // }
-
+useEffect(() => {
+    return () => saveShowIds(savedShowIds);
+  });
 var handleformsubmit = async (event) => {
     
 
@@ -32,12 +37,12 @@ var handleformsubmit = async (event) => {
       const { results } = await response.json();
 
       const showData = results.map((show) => ({
-        name: show.title,
-        image: show.poster_path,
+        name: show.name,
+        image: 'http://image.tmdb.org/t/p/w200' + show.poster_path,
         overview: show.overview
       }));
       console.log(showData)
-      
+      setSearchedShows(showData);
       setSearchInput('');
       //where we will 
     } catch (err) {
@@ -46,7 +51,7 @@ var handleformsubmit = async (event) => {
   };
 
     return (
-        <div>
+        <div className="box-center">
       <Jumbotron fluid className='text-light bg-dark'>
         <Container>
           <h1>Search for a show or movie!</h1>
@@ -84,14 +89,14 @@ var handleformsubmit = async (event) => {
             return (
               <Card key={show.showId} border='dark'>
                 {show.image ? (
-                  <Card.Img src={show.image} alt={`The cover for ${show.title}`} variant='top' />
+                  <Card.Img src={show.image} alt={`${show.name}`} variant='top' />
                 ) : null}
                 <Card.Body>
-                  <Card.Title>{show.title}</Card.Title>
+                  <Card.Title>{show.name}</Card.Title>
                   <p className='small'>Overview</p>
-                  <Card.Text>{show.description}</Card.Text>
+                  <Card.Text>{show.overview}</Card.Text>
                   {Auth.loggedIn() && (
-                    <button type="submit">Submit</button>
+                    <button type="submit">Add</button>
                   )}
                 </Card.Body>
               </Card>
