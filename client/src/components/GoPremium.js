@@ -11,14 +11,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { BsCheckCircle, BsXCircle } from "react-icons/bs";
 import ListGroup from "react-bootstrap/ListGroup";
+import { Badge } from "react-bootstrap"
 
 function GoPremium(props) {
   return (
-    <Container flex direction>
+    <Container>
       <h2> Go Premium! </h2>
+
+      <Badge bg="secondary"> test </Badge>
       
       <Row>
-        <Col>
+        <Col xs={3}>
           <h3>Features</h3>
   <ListGroup>
   <ListGroup.Item>Upcoming Seasons Notifications
@@ -31,28 +34,37 @@ function GoPremium(props) {
   </ListGroup>
         </Col>
 
-        <Col>
+        <Col xs={3}>
           <h3>Level Up!</h3>
-        </Col>
+        
+          <ListGroup>
+  <ListGroup.Item><BsCheckCircle />
+  </ListGroup.Item>
+  <ListGroup.Item><BsCheckCircle /></ListGroup.Item> 
+  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
+  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
+  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
+  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
+  </ListGroup>
 
-        <BsCheckCircle />
-        <BsCheckCircle />
-        <BsCheckCircle />
-        <BsCheckCircle />
-        <BsCheckCircle />
-        <BsCheckCircle />
+ 
+
+        </Col>
        
-        <Col>
+        <Col xs={3}>
           <h3>Free Mode </h3>
+       
+          <ListGroup>
+  <ListGroup.Item><BsCheckCircle />
+  </ListGroup.Item>
+  <ListGroup.Item><BsCheckCircle /></ListGroup.Item> 
+  <ListGroup.Item><BsXCircle/></ListGroup.Item>
+  <ListGroup.Item><BsXCircle /></ListGroup.Item>
+  <ListGroup.Item><BsXCircle /></ListGroup.Item>
+  <ListGroup.Item><BsXCircle /></ListGroup.Item>
+  </ListGroup>
+    
         </Col>
-
-        <BsCheckCircle />
-        <BsXCircle />
-        <BsXCircle />
-        <BsXCircle />
-        <BsXCircle />
-        <BsXCircle />
-        <BsXCircle />
      
       </Row>
     </Container>
