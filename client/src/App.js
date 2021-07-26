@@ -28,31 +28,54 @@ const client = new ApolloClient({
   uri: '/graphql',
 })
 function App() {
-  return (
-    <div className="renderApp">
-      <ApolloProvider client={client}>
-        <Router>
-          <div>
-            <StoreProvider>
-              <Nav />
+
+    return (
+      <div className="renderApp">
+        <ApolloProvider client={client}>
+          <Router>
+            <div>
+              <StoreProvider>
+                <NavBar />
+                <SearchBar />
+                <Home />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/login" component={LogIn} />
+                  <Route exact path="/signup" component={SignUp} />
+                  <Route exact path="/gopremium" component={GoPremium} />
+                  <Route exact path="/carousel" component={Carousel} />
+                  {/* <Route component={NoMatch} /> */}
+                </Switch>
+              </StoreProvider>
+            </div>
+            <Footer />
+          </Router>
+        </ApolloProvider>
+      </div>
+    );
+  //   <div className="renderApp">
+  //     <ApolloProvider client={client}>
+  //       <Router>
+  //         <div>
+  //           <StoreProvider>
+  //             <Nav />
               
-              <SearchBar />
-              
-              <Switch>
-              <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={LogIn} />
-                <Route exact path="/signup" component={SignUp} />
-                <Route exact path="/gopremium" component={GoPremium} />
-                <Route exact path="/carousel" component={Carousel} />
-                {/* <Route component={NoMatch} /> */}
-              </Switch>
-            </StoreProvider>
-          </div>
-          <Footer />
-        </Router>
-      </ApolloProvider>
-    </div>
-  );
+  //             <SearchBar />
+  //             <Switch>
+  //               <Route exact path="/" component={Home} />
+  //               <Route exact path="/login" component={LogIn} />
+  //               <Route exact path="/signup" component={SignUp} />
+  //               <Route exact path="/gopremium" component={GoPremium} />
+  //               <Route exact path="/carousel" component={Carousel} />
+  //               {/* <Route component={NoMatch} /> */}
+  //             </Switch>
+  //           </StoreProvider>
+  //         </div>
+  //         <Footer />
+  //       </Router>
+  //     </ApolloProvider>
+  //   </div>
+  // );
 }
 
 
