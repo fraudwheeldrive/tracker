@@ -38,14 +38,13 @@ function App() {
               <StoreProvider>
                 <NavBar />
                 <SearchBar />
-                
                 <Switch>
                   <Route exact path="/home" component={Home} />
                   <Route exact path="/login" component={LogIn} />
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
                   <Route exact path="/carousel" component={Carousel} />
-                  {/* <Route component={NoMatch} /> */}
+                  <Route component={NoMatch} />
                 </Switch>
               </StoreProvider>
             </div>
