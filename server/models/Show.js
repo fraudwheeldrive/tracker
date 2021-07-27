@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
+<<<<<<< HEAD
 const orderSchema = new Schema({
   title:{
     type: String,
@@ -10,15 +11,27 @@ const orderSchema = new Schema({
   purchaseDate: {
     type: Date,
     default: Date.now
+=======
+const showSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true
+>>>>>>> d61c3137ebf18141480a483dcd8e8cc771248bcc
   },
-  products: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Product'
-    }
-  ]
+  image: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  overview: {
+    type: String,
+    required: true
+  }
+  
 });
 
-const Order = mongoose.model('Order', orderSchema);
+const Show = mongoose.model('Show', showSchema);
 
-module.exports = Order;
+module.exports = Show;
+
