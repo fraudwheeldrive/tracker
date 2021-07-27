@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import SignUp from "./components/SignUp";
-import NavBar from "./components/Nav"
+import NavBar from "./components/NavBar"
 import LogIn from "./components/LogIn"
 import Carousel from "./components/Carousel"
 import GoPremium from "./components/GoPremium"
@@ -13,6 +13,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import ApolloClient from 'apollo-boost';
 import Home from './pages/Home'
 import SearchBar from './components/SearchBar';
+
 
 
 
@@ -37,13 +38,13 @@ function App() {
               <StoreProvider>
                 <NavBar />
                 <SearchBar />
-                          <Switch>
+                <Switch>
                   <Route exact path="/home" component={Home} />
                   <Route exact path="/login" component={LogIn} />
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
                   <Route exact path="/carousel" component={Carousel} />
-                  {/* <Route component={NoMatch} /> */}
+                
                 </Switch>
               </StoreProvider>
             </div>
@@ -52,10 +53,6 @@ function App() {
         </ApolloProvider>
       </div>
     );
-  
+
 }
-
-
-
-
 export default App;
