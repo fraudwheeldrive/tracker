@@ -44,7 +44,7 @@ function App() {
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
                   <Route exact path="/carousel" component={Carousel} />
-                  <Route component={NoMatch} />
+                
                 </Switch>
               </StoreProvider>
             </div>
