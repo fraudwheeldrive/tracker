@@ -4,22 +4,28 @@ import { useMutation } from "@apollo/react-hooks";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
+
+import ListGroup from "react-bootstrap/ListGroup";
+import Accordion from 'react-bootstrap/Accordion'
+import Badge from 'react-bootstrap/Badge'
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { BsCheckCircle, BsXCircle } from "react-icons/bs";
-import ListGroup from "react-bootstrap/ListGroup";
-import { Badge } from "react-bootstrap"
+import { RiCheckboxCircleLine, RiCloseCircleLine } from "react-icons/ri";
+
+
 
 function GoPremium(props) {
   return (
+    <div>
     <Container>
 
-      <h2 className> Go Premium! </h2>
+      <h2 className="premium-header"> Go Premium! </h2>
 
       
       <Row>
-        <Col xs={3}>
+        <Col xs={5}>
           <h3>Features</h3>
   <ListGroup>
   <ListGroup.Item>Upcoming Seasons Notifications
@@ -36,13 +42,13 @@ function GoPremium(props) {
           <h3>Level Up!</h3>
         
           <ListGroup>
-  <ListGroup.Item><BsCheckCircle />
+  <ListGroup.Item><RiCheckboxCircleLine/>
   </ListGroup.Item>
-  <ListGroup.Item><BsCheckCircle /></ListGroup.Item> 
-  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
-  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
-  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
-  <ListGroup.Item><BsCheckCircle /></ListGroup.Item>
+  <ListGroup.Item><RiCheckboxCircleLine /></ListGroup.Item> 
+  <ListGroup.Item><RiCheckboxCircleLine/></ListGroup.Item>
+  <ListGroup.Item><RiCheckboxCircleLine /></ListGroup.Item>
+  <ListGroup.Item><RiCheckboxCircleLine/></ListGroup.Item>
+  <ListGroup.Item><RiCheckboxCircleLine /></ListGroup.Item>
   </ListGroup>
 
  
@@ -53,19 +59,22 @@ function GoPremium(props) {
           <h3>Free Mode </h3>
        
           <ListGroup>
-  <ListGroup.Item><BsCheckCircle />
+  <ListGroup.Item><RiCheckboxCircleLine />
   </ListGroup.Item>
-  <ListGroup.Item><BsCheckCircle /></ListGroup.Item> 
-  <ListGroup.Item><BsXCircle/></ListGroup.Item>
-  <ListGroup.Item><BsXCircle /></ListGroup.Item>
-  <ListGroup.Item><BsXCircle /></ListGroup.Item>
-  <ListGroup.Item><BsXCircle /></ListGroup.Item>
+  <ListGroup.Item><RiCheckboxCircleLine/></ListGroup.Item> 
+  <ListGroup.Item><RiCloseCircleLine/></ListGroup.Item>
+  <ListGroup.Item><RiCloseCircleLine/></ListGroup.Item>
+  <ListGroup.Item><RiCloseCircleLine/></ListGroup.Item>
+  <ListGroup.Item><RiCloseCircleLine /></ListGroup.Item>
   </ListGroup>
     
         </Col>
      
       </Row>
     </Container>
+
+
+    </div>
   );
 }
 
