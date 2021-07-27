@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import SignUp from "./components/SignUp";
-import Nav from "./components/Nav"
+import NavBar from "./components/Nav"
 import LogIn from "./components/LogIn"
 import Carousel from "./components/Carousel"
 import GoPremium from "./components/GoPremium"

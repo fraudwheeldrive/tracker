@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Nav(props) {
+function NavBar(props) {
 
   //make sure links to are exact path
   return (
@@ -21,5 +21,5 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default NavBar;
 
