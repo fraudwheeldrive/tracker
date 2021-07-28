@@ -16,6 +16,8 @@ function NavBar(props) {
 
         <Link to="/Home"><h3 className="nav-text">Home</h3></Link>
 
+        <Link to="/Search"><h3 className="nav-text">Search</h3></Link>
+
         <Link to="/LogIn"><h3 className="nav-text">Log In</h3></Link>
 
         <Link to="/SignUp"><h3 className="nav-text">Sign Up</h3></Link>
