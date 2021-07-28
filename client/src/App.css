@@ -169,17 +169,32 @@ justify-content: center;
   padding-bottom: 200px;
 }
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.premiumHeader {
+display:flex;
+justify-content: start;
+padding: 20px
+}
+
 .premium-header {
   display:flex;
-justify-content: center;
-}
+  justify-content: center;
+  padding: 40px 0px 20px 0px
+  }
 
 .premium-content {
   vertical-align: middle;
+
 }
 
 .premium-container {
-  padding-bottom: 400px;
+  padding-bottom: 200px;
 }
 
 /* accordion  */
@@ -236,12 +251,7 @@ h1 {
   .accordion {
     width: 100%;
   }
-  padding-bottom: 50px;
 }
+  
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-}
+

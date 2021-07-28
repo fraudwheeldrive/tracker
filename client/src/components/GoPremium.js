@@ -69,7 +69,7 @@ function GoPremium(props) {
       
       <Row>
         <Col xs={6}>
-          <h2>Features</h2>
+          <h2 className ="premiumHeader">Features</h2>
   <ListGroup style = {colStyle}>
   <ListGroup.Item>Upcoming Seasons Notifications
   </ListGroup.Item>
@@ -82,7 +82,7 @@ function GoPremium(props) {
         </Col>
 
         <Col className= "premium-content" xs={2}>
-          <h2>Level Up!</h2>
+          <h2 className ="premiumHeader" >Level Up!</h2>
         
           <ListGroup>
   <ListGroup.Item><FaRegCheckCircle style={checkStyle}/>
@@ -99,7 +99,7 @@ function GoPremium(props) {
         </Col>
        
         <Col className= "premium-content" xs={2}>
-          <h2>Free Mode </h2>
+          <h2 className="premiumHeader"> Free Mode </h2>
        
           <ListGroup>
   <ListGroup.Item><FaRegCheckCircle style={checkStyle}/>
@@ -115,7 +115,7 @@ function GoPremium(props) {
 
         <Col xs={10}>
         <div>
-      <h1>Frequently Asked Questions</h1>
+      <h2 className ="premium-header">Frequently Asked Questions</h2>
       <div className="accordion">
         {accordionData.map(({ title, content }) => (
           <AccordionList title={title} content={content} />
