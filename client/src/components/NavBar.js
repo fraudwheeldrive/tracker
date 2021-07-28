@@ -6,7 +6,6 @@ import { MdAddShoppingCart } from "react-icons/md";
 const style = { color: "white", size:"50px" };
 const navStyle = {color: "black" };
 
-
 function NavBar(props) {
 
   //make sure links to are exact path
@@ -16,6 +15,8 @@ function NavBar(props) {
       <ul id="nav-mobile" className="nav-links">
 
         <Link to="/Home"><h3 className="nav-text">Home</h3></Link>
+
+        <Link to="/Search"><h3 className="nav-text">Search</h3></Link>
 
         <Link to="/LogIn"><h3 className="nav-text">Log In</h3></Link>
 
