@@ -48,12 +48,12 @@ const SearchBar = () => {
       }
     };
     return (
-      <div>
-        <Container>
+      <div >
+        <Container className="box-center">
           <h3>Search for a show or movie!</h3>
           <Form onSubmit={handleformsubmit}>
             <Form.Row>
-              <Col xs={5} md={5}>
+              <Col xs={10} md={12}>
                 <Form.Control
                   name="searchInput"
                   value={searchInput}

@@ -110,6 +110,8 @@ justify-content: center;
 }
 
 
+/* Carousel Style  */
+
 .slider {
   position: relative;
   height: 50vh;
@@ -158,11 +160,13 @@ justify-content: center;
   height: 50vh;
 }
 
+/* Premium page style  */
+
 .home-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 200px;
 }
 
 .wrapper {
@@ -171,3 +175,83 @@ justify-content: center;
   justify-content: space-between;
   padding: 20px;
 }
+
+.premiumHeader {
+display:flex;
+justify-content: start;
+padding: 20px
+}
+
+.premium-header {
+  display:flex;
+  justify-content: center;
+  padding: 40px 0px 20px 0px
+  }
+
+.premium-content {
+  vertical-align: middle;
+
+}
+
+.premium-container {
+  padding-bottom: 200px;
+}
+
+/* accordion  */
+
+body {
+  background: rgb(7, 239, 247);
+  background: radial-gradient(
+    circle,
+    rgb(236, 137, 180) 0%,
+    rgba(199, 233, 148, 1) 100%
+  );
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+}
+
+.accordion {
+  
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #282c34;
+}
+
+.accordion-title:hover {
+  background-color: #282c34;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+  color: #f2f2f2; ;
+}
+
+.accordion-content {
+  background-color: #282c34;
+ 
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+}
+  
+
+
