@@ -37,9 +37,9 @@ function App() {
             <div>
               <StoreProvider>
                 <NavBar />
-                <SearchBar />
                 <Switch>
                   <Route exact path="/home" component={Home} />
+                  <Route exact path="/search" component={SearchBar} />
                   <Route exact path="/login" component={LogIn} />
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
