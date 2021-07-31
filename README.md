@@ -1,9 +1,9 @@
 # PocketWatch.io ©2021 
-![img](./assets/img/screenshot.png)
-![img](./assets/img/wireframe1.png)
-![img](./assets/img/wireframe2.png)
-![img](./assets/img/wireframe3.png)
-![img](./assets/img/wireframe4.png)
+![img](./client/src/assets/img/screenshot.png)
+![img](./client/src/assets/img/wireframe1.png)
+![img](./client/src/assets/img/wireframe2.png)
+![img](./client/src/assets/img/wireframe3.png)
+![img](./client/src/assets/img/wireframe4.png)
 
 ## Description
 `To be filled in by Jagraj`
