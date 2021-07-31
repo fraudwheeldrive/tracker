@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar"
 import LogIn from "./components/LogIn"
 import Carousel from "./components/Carousel"
 import GoPremium from "./components/GoPremium"
+import MyLists from "./pages/MyLists"
 import Footer from "./components/Footer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -44,7 +45,7 @@ function App() {
                   <Route exact path="/signup" component={SignUp} />
                   <Route exact path="/gopremium" component={GoPremium} />
                   <Route exact path="/carousel" component={Carousel} />
-                
+                  <Route exact path="/mylists" component={MyLists} />
                 </Switch>
               </StoreProvider>
             </div>

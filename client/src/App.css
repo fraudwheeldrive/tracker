@@ -253,5 +253,8 @@ h1 {
   }
 }
   
+.right {
+  float: right;
+  color: #0ac733;
 
-
+}
