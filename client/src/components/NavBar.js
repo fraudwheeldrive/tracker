@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import { MdAddShoppingCart } from "react-icons/md";
 import React, { useState, useEffect } from "react";
+import User from '../'
 import {
   Jumbotron,
   Col,
@@ -38,7 +39,7 @@ function NavBar(props) {
         
         {Auth.loggedIn() && (<Link to="/MyLists"><h3 className="nav-text">My Lists</h3></Link>)}
 
-        {Auth.loggedIn() && (<h6 className="right">Welcome back!</h6>)}
+        {Auth.loggedIn() && (<h6 className="right">Welcome back {(Auth.username)}</h6>)}
       </ul>
       </Nav>
       <MdAddShoppingCart style={style} />
