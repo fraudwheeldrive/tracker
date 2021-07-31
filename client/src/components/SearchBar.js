@@ -81,7 +81,6 @@ const SearchBar = () => {
             <Row>
             {searchedShows.map((show) => {
               return (
-                
                 <Col xs={6} md={4}>
                 <Card style={{ width: '17rem' }}>
                   {show.image ? (
