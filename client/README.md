@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# PocketWatch.io ©2021 
+![img](./assets/img/screenshot.png)
+![img](./assets/img/wireframe1.png)
+![img](./assets/img/wireframe2.png)
+![img](./assets/img/wireframe3.png)
+![img](./assets/img/wireframe4.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+`To be filled in by Jagraj`
 
-## Available Scripts
+Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
+Main Github: 
+[MissAimeeJay](https://github.com/MissAimeeJay)
+Repository Link: https://github.com/fraudwheeldrive/tracker  
+Live Page Url:  
+[(to be added soon)]((to be added soon))
 
-In the project directory, you can run:
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributon](#credits)
+* [License](#license)
+* [Testing](#testing)
+* [Questions](#questions)
 
-### `npm start`
+## Installation
+This app is available from the Heroku link listed above.  If the repository viewer wishes to download and install the node packages required to run the application from the command line, they may do so by cloning the repository and entering `npm install` from the root folder which will intall dependencies into all folders that require them.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage 
+To be filled in by Jagraj
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Contribution   `To be filled in by Jagraj`
+fraudwheeldrive  
+[https://github.com/fraudwheeldrive](https://github.com/fraudwheeldrive)
 
-### `npm test`
+## License
+The Unlicense
+[Click here for more information on this license](https://choosealicense.com/licenses/unlicense)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Testing
+To be filled in by Jagraj
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Questions
+If you have questions or would like to contact for other reasons, please contact
+Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
+Email: ajesso@post.com
+Main Github: [MissAimeeJay](https://github.com/MissAimeeJay)
