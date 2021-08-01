@@ -40,6 +40,11 @@ This app is available from the Heroku link listed above.  If the repository view
 ## Contribution   `To be filled in by Jagraj`
 fraudwheeldrive  
 [https://github.com/fraudwheeldrive](https://github.com/fraudwheeldrive)
+https://github.com/MissAimeeJay
+Deja Martin
+https://github.com/dejagraver
+Jagraj Singh
+https://github.com/ITJagraj
 
 ## License
 The Unlicense
@@ -47,10 +52,13 @@ The Unlicense
 
 
 ## Testing
-To be 
+To run test, run npm run test in the client directory of the application
 
 ## Questions
 If you have questions or would like to contact for other reasons, please contact
 Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Email: ajesso@post.com
 Main Github: [MissAimeeJay](https://github.com/MissAimeeJay)
+Email: singh.jagraj96@yahoo.com
+Email: adcore89gmail.com
+Email: dejaamaartin@gmail.com
