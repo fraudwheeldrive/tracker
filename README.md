@@ -47,7 +47,7 @@ The Unlicense
 
 
 ## Testing
-To be filled in by Jagraj
+To be 
 
 ## Questions
 If you have questions or would like to contact for other reasons, please contact
