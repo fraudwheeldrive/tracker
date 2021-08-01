@@ -6,7 +6,12 @@
 ![img](./client/src/assets/img/wireframe4.png)
 
 ## Description
-`To be filled in by Jagraj`
+Pocket.io is a movie tracker app which is built using React, mongoDB. This web app uses the Movie API to display the movie overviews.
+
+* [] User can sign up/login
+* [] User can access the premium feature
+* [] User can search for any movie on the search tab 
+* [] User can get a notification for the upcoming movies too
 
 Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Main Github: 
@@ -27,11 +32,19 @@ Live Page Url:
 This app is available from the Heroku link listed above.  If the repository viewer wishes to download and install the node packages required to run the application from the command line, they may do so by cloning the repository and entering `npm install` from the root folder which will intall dependencies into all folders that require them.
 
 ## Usage 
-To be filled in by Jagraj
+1. Git clone the repo in the desired local folder
+2. Cd to the root folder and start the project
+3. npm run deploy
+4. The should automatically open at http://localhost:3000
 
 ## Contribution   `To be filled in by Jagraj`
 fraudwheeldrive  
 [https://github.com/fraudwheeldrive](https://github.com/fraudwheeldrive)
+https://github.com/MissAimeeJay
+Deja Martin
+https://github.com/dejagraver
+Jagraj Singh
+https://github.com/ITJagraj
 
 ## License
 The Unlicense
@@ -39,10 +52,13 @@ The Unlicense
 
 
 ## Testing
-To be filled in by Jagraj
+To run test, run npm run test in the client directory of the application
 
 ## Questions
 If you have questions or would like to contact for other reasons, please contact
 Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Email: ajesso@post.com
 Main Github: [MissAimeeJay](https://github.com/MissAimeeJay)
+Email: singh.jagraj96@yahoo.com
+Email: adcore89gmail.com
+Email: dejaamaartin@gmail.com
