@@ -1,3 +1,5 @@
+//referenced from shop shop lesson
+
 const addDateSuffix = date => {
     let dateStr = date.toString();
   

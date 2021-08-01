@@ -80,6 +80,11 @@ justify-content: center;
 }
 
 /* Used for centering content */
+.box-center-2 {
+  display: flex;
+  justify-content: center;
+}
+
 .box-center {
   display: flex;
   flex-direction: column;
@@ -102,4 +107,154 @@ justify-content: center;
 .logo-box {
   width: 65vh;
   height: 27vh;
+}
+
+
+/* Carousel Style  */
+
+.slider {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 680x;
+  height: 1000px;
+  border-radius: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  font-size: 3rem;
+  color:#000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(.4);
+  height: 50vh;
+}
+
+/* Premium page style  */
+
+.home-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.premiumHeader {
+display:flex;
+justify-content: start;
+padding: 20px
+}
+
+.premium-header {
+  display:flex;
+  justify-content: center;
+  padding: 40px 0px 20px 0px
+  }
+
+.premium-content {
+  vertical-align: middle;
+
+}
+
+.premium-container {
+  padding-bottom: 200px;
+}
+
+/* accordion  */
+
+body {
+  background: rgb(7, 239, 247);
+  background: radial-gradient(
+    circle,
+    rgb(236, 137, 180) 0%,
+    rgba(199, 233, 148, 1) 100%
+  );
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+}
+
+.accordion {
+  
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #282c34;
+}
+
+.accordion-title:hover {
+  background-color: #282c34;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+  color: #f2f2f2; ;
+}
+
+.accordion-content {
+  background-color: #282c34;
+ 
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+}
+  
+.right {
+  float: right;
+  color: #0ac733;
+
 }
