@@ -24,24 +24,46 @@ const SearchBar = () => {
   });
 
   //add to wish list 
-  const [added, setAdded] = useState([]);
+  // const [added, setSavedShowIds] = useState([]);
   useEffect(() => {
-		const addedItem = JSON.parse(
+		const savedShowIds = JSON.parse(
 			localStorage.getItem('movies-tv-shows')
 		);
 
-		if (addedItem) {
-			setAdded(addedItem);
+		if (savedShowIds) {
+			setSavedShowIds(savedShowIds);
 		}
 	}, []);
+
   const saveToLocalStorage = (items) => {
 		localStorage.setItem('movies-tv-shows', JSON.stringify(items));
 	};
 
-	const handleAdd = (show) => {
-		const wishList = [...added, show];
-		setAdded(wishList);
-		saveToLocalStorage(wishList);
+	const handleAdd = async (event) => {
+    event.preventDefault();
+    if (!savedShowIds) {
+      return false;
+    }
+    try {
+      const response = await saveShow(savedShowIds);
+
+      if (!response.ok) {
+        throw new Error('Try again');
+
+      }
+      const { results } = await response.json();
+
+
+      // const wishList = [...added, show];
+      const wishList = results.map((show) => ({
+        name: show.name,
+      }));
+      console.log(wishList)
+      setSavedShowIds(wishList);
+      saveToLocalStorage(wishList);
+    } catch (err) {
+      console.error(err);
+    }
 	};
 
 
@@ -122,7 +144,7 @@ const SearchBar = () => {
                       <Button
                        variant="primary"
                        handleAddClick={handleAdd}
-                       addToListComponent={WishList}
+                       addtolistcomponent={WishList}
                        >
                          Add to Watchlist
                        </Button>
@@ -139,6 +161,5 @@ const SearchBar = () => {
       </div>
   );
   }
-
 
   export default SearchBar;
