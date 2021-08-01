@@ -203,7 +203,7 @@ body {
   background: rgb(7, 239, 247);
   background: radial-gradient(
     circle,
-    rgb(236, 137, 180) 0%,
+    rgb(241, 131, 179) 0%,
     rgba(199, 233, 148, 1) 100%
   );
 }

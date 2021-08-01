@@ -1,3 +1,6 @@
+
+//JSX to create accordion functionality on the go premium accordion 
+
 import React, { useState } from 'react';
 
 const AccordionList = ({ title, content }) => {
