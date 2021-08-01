@@ -27,7 +27,7 @@ function NavBar(props) {
     <Nav className= "navbar justify-content-center" >
       <ul id="nav-mobile" className="nav-links">
 
-        <Link to="/Home"><h3 className="nav-text">Home</h3></Link>
+        <Link to="/"><h3 className="nav-text">Home</h3></Link>
 
         <Link to="/Search"><h3 className="nav-text">Search</h3></Link>
 
