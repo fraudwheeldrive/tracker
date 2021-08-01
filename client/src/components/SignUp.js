@@ -44,7 +44,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
+        <div className="flex-row space-between my-3">
           <label htmlFor="email">Email:</label>
           <input
             placeholder="youremail@test.com"
@@ -64,7 +64,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row flex-end">
+        <div className="flex-row flex-end r">
           <button type="submit">
             Submit
           </button>

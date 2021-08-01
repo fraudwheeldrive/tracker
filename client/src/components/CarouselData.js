@@ -52,5 +52,30 @@ export const CarouselData = [
       image:
         "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kbE3VHOUWWpaE7k7WmReqJYqyh1.jpg",
     },
+    {
+      image:
+        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/e4hDVgySEaq3JXkXPUxQuqK5SbE.jpg",
+    },
+    {
+      image:
+        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+    },
+    {
+      image:
+        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+    },
+    {
+      image:
+        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fZXSwgZknp81vmciTb86rw0MejV.jpg",
+    },
+    {
+      image:
+        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zPyHpkJZ5O08lbgrQQIROXtb3xz.jpg",
+    },
+    {
+      image:
+        "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/eyTu5c8LniVciRZIOSHTvvkkgJa.jpg",
+    },
+
   ];
   
