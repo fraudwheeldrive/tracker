@@ -12,8 +12,8 @@ Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh
 Main Github: 
 [MissAimeeJay](https://github.com/MissAimeeJay)
 Repository Link: https://github.com/fraudwheeldrive/tracker  
-Live Page Url:  
-[(to be added soon)]((to be added soon))
+Live Page Url:  https://w4tch-tow3r.herokuapp.com/
+
 
 ## Table of Contents
 * [Installation](#installation)
