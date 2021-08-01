@@ -59,9 +59,7 @@ If you have questions or would like to contact for other reasons, please contact
 Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Email: ajesso@post.com
 Main Github: [MissAimeeJay](https://github.com/MissAimeeJay)
-<<<<<<< HEAD
 =======
 Email: singh.jagraj96@yahoo.com
 Email: adcore89gmail.com
 Email: dejaamaartin@gmail.com
->>>>>>> bb0b274a532cf0aafadb1ccd0830de1b6af61a7d
