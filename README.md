@@ -6,7 +6,7 @@
 ![img](./client/src/assets/img/wireframe4.png)
 
 ## Description
-`To be filled in by Jagraj`  test test
+`To be filled in by Jagraj`
 
 Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Main Github: 
