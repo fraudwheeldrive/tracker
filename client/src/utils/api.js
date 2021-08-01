@@ -51,8 +51,6 @@ export const getMe = (token) => {
   };
 
 
-
-
 // make a search to google shows api
 export const SearchShowsApi = (searchInput) => {
     return fetch(`https://api.themoviedb.org/3/search/multi?api_key=b50a54473311bbac83f4a96b6efa872d&query=${searchInput}&page=1`);
