@@ -1,13 +1,13 @@
 import React from 'react';
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
 
 const MovieList = (props) => {
 	const addToListComponent = props.addToListComponent;
 	return (
-		<>
-			{props.movies.map((movie, index) => (
+		< >
+			{props.results.map((show) => (
 				<div>
-					<div onClick={() => props.handleAddClcik(movie)}>
+					<div onClick={() => props.handleAddClick(show)}>
 						<addToListComponent />
 					</div>
 				</div>

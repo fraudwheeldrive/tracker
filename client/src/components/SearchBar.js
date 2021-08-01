@@ -38,8 +38,8 @@ const SearchBar = () => {
 		localStorage.setItem('movies-tv-shows', JSON.stringify(items));
 	};
 
-	const handleAdd = (movie) => {
-		const wishList = [...added, movie];
+	const handleAdd = (show) => {
+		const wishList = [...added, show];
 		setAdded(wishList);
 		saveToLocalStorage(wishList);
 	};
@@ -73,6 +73,7 @@ const SearchBar = () => {
         console.error(err);
       }
     };
+
     return (
       <div >
         <Container className="box-center">
