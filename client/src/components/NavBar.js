@@ -23,7 +23,9 @@ function NavBar(props) {
         <Link to="/SignUp"><h3 className="nav-text">Sign Up</h3></Link>
 
         <Link to="/GoPremium"><h3 className="nav-text">Go Premium</h3></Link>
-        
+
+        <Link to="/WishList"><h3 className="nav-text">Wish List</h3></Link>
+
       
       </ul>
       </Nav>

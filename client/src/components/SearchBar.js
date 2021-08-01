@@ -12,6 +12,8 @@ import Auth from "../utils/auth";
 import { saveShow, SearchShowsApi } from "../utils/api";
 import { saveShowIds, getSavedShowIds } from "../utils/GlobalState";
 import Container from "react-bootstrap/Container";
+import WishList from './WishList';
+
 
 const SearchBar = () => {
   const [searchedShows, setSearchedShows] = useState([]);
@@ -20,6 +22,30 @@ const SearchBar = () => {
   useEffect(() => {
     return () => saveShowIds(savedShowIds);
   });
+
+  //add to wish list 
+  const [added, setAdded] = useState([]);
+  useEffect(() => {
+		const addedItem = JSON.parse(
+			localStorage.getItem('movies-tv-shows')
+		);
+
+		if (addedItem) {
+			setAdded(addedItem);
+		}
+	}, []);
+  const saveToLocalStorage = (items) => {
+		localStorage.setItem('movies-tv-shows', JSON.stringify(items));
+	};
+
+	const handleAdd = (movie) => {
+		const wishList = [...added, movie];
+		setAdded(wishList);
+		saveToLocalStorage(wishList);
+	};
+
+
+
   const handleformsubmit = async (event) => {
     event.preventDefault();
     if (!searchInput) {
@@ -92,7 +118,13 @@ const SearchBar = () => {
                     <p className='small'>Overview</p>
                     <Card.Text>{show.overview}</Card.Text>
                     {Auth.loggedIn() && (
-                      <Button variant="primary">Add to Watchlist</Button>
+                      <Button
+                       variant="primary"
+                       handleAddClick={handleAdd}
+                       addToListComponent={WishList}
+                       >
+                         Add to Watchlist
+                       </Button>
                     )}
                   </Card.Body>
                 </Card>
