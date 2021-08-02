@@ -41,7 +41,7 @@ This app is available from the Heroku link listed above.  If the repository view
 4. The should automatically open at http://localhost:3000
 
 ## Contribution   
-* [Andrew Core]([https://github.com/fraudwheeldrive)
+* [Andrew Core](https://github.com/fraudwheeldrive)
 * [Aimee Jesso](https://github.com/MissAimeeJay)
 * [Deja Martin](https://github.com/dejagraver)
 * [Jagraj Singh](https://github.com/ITJagraj)
@@ -56,8 +56,8 @@ To run test, run npm run test in the client directory of the application
 
 ## Questions
 If you have questions or would like to contact for other reasons, please contact
-* Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
-* Email: ajesso@post.com
-* Email: singh.jagraj96@yahoo.com
-* Email: adcore89gmail.com
-* Email: dejaamaartin@gmail.com
+ 
+* Aimee Jesso   Email: ajesso@post.com [Github](https://github.com/MissAimeeJay)
+* Jagraj Singh  Email: singh.jagraj96@yahoo.com [Github](https://github.com/ITJagraj)
+* Andrew Core   Email: adcore89gmail.com [Github](https://github.com/fraudwheeldrive)
+* Deja Martin   Email: dejaamaartin@gmail.com [Github](https://github.com/dejagraver)
