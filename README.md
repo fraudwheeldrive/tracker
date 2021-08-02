@@ -40,11 +40,11 @@ This app is available from the Heroku link listed above.  If the repository view
 3. npm run deploy
 4. The should automatically open at http://localhost:3000
 
-## Contribution   `To be filled in by Jagraj`
-[Andrew Core]([https://github.com/fraudwheeldrive)
-[Aimee Jesso](https://github.com/MissAimeeJay)
-[Deja Martin](https://github.com/dejagraver)
-[Jagraj Singh](https://github.com/ITJagraj)
+## Contribution   
+* [Andrew Core]([https://github.com/fraudwheeldrive)
+* [Aimee Jesso](https://github.com/MissAimeeJay)
+* [Deja Martin](https://github.com/dejagraver)
+* [Jagraj Singh](https://github.com/ITJagraj)
 
 ## License
 The Unlicense
@@ -56,9 +56,8 @@ To run test, run npm run test in the client directory of the application
 
 ## Questions
 If you have questions or would like to contact for other reasons, please contact
-Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
-Email: ajesso@post.com
-Main Github: [MissAimeeJay](https://github.com/MissAimeeJay)
-Email: singh.jagraj96@yahoo.com
-Email: adcore89gmail.com
-Email: dejaamaartin@gmail.com
+* Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
+* Email: ajesso@post.com
+* Email: singh.jagraj96@yahoo.com
+* Email: adcore89gmail.com
+* Email: dejaamaartin@gmail.com
