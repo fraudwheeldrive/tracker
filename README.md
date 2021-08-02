@@ -8,11 +8,19 @@
 ## Description
 Pocket.io is a movie tracker app which is built using React, mongoDB. This web app uses the Movie API to display the movie overviews.
 
+<<<<<<< HEAD
 * User can sign up [Sign-Up](https://w4tch-tow3r.herokuapp.com/SignUp)
 * User can log in [Log-in](https://w4tch-tow3r.herokuapp.com/LogIn)
 * User can access the premium feature [Go-Premium](https://w4tch-tow3r.herokuapp.com/GoPremium)
 * User can search for any movie on the search tab [Search](https://w4tch-tow3r.herokuapp.com/Search)
 * User can get a notification for the upcoming movies too [Movie-List](https://w4tch-tow3r.herokuapp.com/MyLists)
+=======
+* [https://w4tch-tow3r.herokuapp.com/LogIn] User can login
+* [https://w4tch-tow3r.herokuapp.com/SignUp] User Can Sign up
+* [https://w4tch-tow3r.herokuapp.com/GoPremium] User can access the premium feature
+* [https://w4tch-tow3r.herokuapp.com/Search] User can search for any movie on the search tab 
+* [https://w4tch-tow3r.herokuapp.com/MyLists] User can get a notification for the upcoming movies too
+>>>>>>> bfcc6bf39352041b755039775e19b0fe7a3bb53a
 
 Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Main Github: 
@@ -56,8 +64,18 @@ To run test, run npm run test in the client directory of the application
 
 ## Questions
 If you have questions or would like to contact for other reasons, please contact
+<<<<<<< HEAD
  
 * Aimee Jesso   Email: ajesso@post.com [Github](https://github.com/MissAimeeJay)
 * Jagraj Singh  Email: singh.jagraj96@yahoo.com [Github](https://github.com/ITJagraj)
 * Andrew Core   Email: adcore89gmail.com [Github](https://github.com/fraudwheeldrive)
 * Deja Martin   Email: dejaamaartin@gmail.com [Github](https://github.com/dejagraver)
+=======
+Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
+Email: ajesso@post.com
+Main Github: [MissAimeeJay](https://github.com/MissAimeeJay)
+=======
+Email: singh.jagraj96@yahoo.com
+Email: adcore89gmail.com
+Email: dejaamaartin@gmail.com
+>>>>>>> bfcc6bf39352041b755039775e19b0fe7a3bb53a
