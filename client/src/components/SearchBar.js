@@ -23,50 +23,30 @@ const SearchBar = () => {
     return () => saveShowIds(savedShowIds);
   });
 
-  //add to wish list 
-  // const [added, setSavedShowIds] = useState([]);
-  useEffect(() => {
-		const savedShowIds = JSON.parse(
-			localStorage.getItem('movies-tv-shows')
-		);
 
-		if (savedShowIds) {
-			setSavedShowIds(savedShowIds);
-		}
-	}, []);
+  const handleSaveItem = async (movieId) => {
+    const movieToSave = searchedMovies.find((movie) => movie.movieId === movieId);
 
-  const saveToLocalStorage = (items) => {
-		localStorage.setItem('movies-tv-shows', JSON.stringify(items));
-	};
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-	const handleAdd = async (event) => {
-    event.preventDefault();
-    if (!savedShowIds) {
+    if (!token) {
       return false;
     }
+
     try {
-      const response = await saveShow(savedShowIds);
+      await saveBook({
+        variables: {
+          name: show.name,
+          image: "http://image.tmdb.org/t/p/w200" + show.poster_path,
+          overview: show.overview,
+        }
+      })
 
-      if (!response.ok) {
-        throw new Error('Try again');
-
-      }
-      const { results } = await response.json();
-
-
-      // const wishList = [...added, show];
-      const wishList = results.map((show) => ({
-        name: show.name,
-      }));
-      console.log(wishList)
-      setSavedShowIds(wishList);
-      saveToLocalStorage(wishList);
+      setSavedmovieIds([...savedmovieIds, movieToSave.movieId]);
     } catch (err) {
       console.error(err);
     }
-	};
-
-
+  };
 
   const handleformsubmit = async (event) => {
     event.preventDefault();
@@ -145,7 +125,9 @@ const SearchBar = () => {
                        variant="primary"
                        handleAddClick={handleAdd}
                        addtolistcomponent={WishList}
+                       
                        >
+                         
                          Add to Watchlist
                        </Button>
                     )}
@@ -163,3 +145,48 @@ const SearchBar = () => {
   }
 
   export default SearchBar;
+
+
+    //add to wish list 
+  // const [added, setSavedShowIds] = useState([]);
+  // useEffect(() => {
+	// 	const savedShowIds = JSON.parse(
+	// 		localStorage.getItem(saveShow)
+	// 	);
+
+	// 	if (savedShowIds) {
+	// 		setSavedShowIds(savedShowIds);
+	// 	}
+	// }, []);
+
+  // const saveToLocalStorage = (items) => {
+	// 	localStorage.setItem(saveShow, JSON.stringify(items));
+	// };
+
+	// const handleAdd = async (event) => {
+  //   event.preventDefault();
+  //   if (!savedShowIds) {
+  //     return false;
+  //   }
+  //   try {
+  //     const response = await saveShow(savedShowIds);
+
+  //     if (!response.ok) {
+  //       throw new Error('Try again');
+
+  //     }
+  //     const { results } = await response.json();
+
+  //     // const wishList = [...added, show];
+  //     const wishList = results.map((show) => ({
+  //       name: show.name,
+  //       image: "http://image.tmdb.org/t/p/w200" + show.poster_path,
+
+  //     }));
+  //     console.log(wishList)
+  //     setSavedShowIds(wishList);
+  //     saveToLocalStorage(wishList);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+	// };

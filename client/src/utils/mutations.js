@@ -23,3 +23,21 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+
+export const SAVE_ITEM = gql`
+    mutation saveItem($content: movieContent!){
+        saveItem(content: $content){
+          _id
+          username
+          email
+          itemCount
+          savedItem {
+              movieId
+              name
+              poster_path
+              overview
+            }
+        }
+    }
+`;
