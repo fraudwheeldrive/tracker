@@ -8,10 +8,12 @@
 ## Description
 Pocket.io is a movie tracker app which is built using React, mongoDB. This web app uses the Movie API to display the movie overviews.
 
-* [] User can sign up/login
-* [] User can access the premium feature
-* [] User can search for any movie on the search tab 
-* [] User can get a notification for the upcoming movies too
+* User can sign up [Sign-Up] (https://w4tch-tow3r.herokuapp.com/SignUp)
+* User can log in [Log-in] (https://w4tch-tow3r.herokuapp.com/LogIn)
+* User can access the premium feature [Go-Premium] (https://w4tch-tow3r.herokuapp.com/GoPremium)
+* User can search for any movie on the search tab [Search](
+https://w4tch-tow3r.herokuapp.com/Search)
+* User can get a notification for the upcoming movies too [Movie-List](https://w4tch-tow3r.herokuapp.com/MyLists)
 
 Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Main Github: 
