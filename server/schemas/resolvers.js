@@ -59,7 +59,7 @@ const resolvers = {
     },
     addShow: async (parent, args, context) => {
       if (context.user) {
-        const thought = await Show.create({ ...args, username: context.user.username });
+        const show = await Show.create({ ...args, username: context.user.username });
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
@@ -67,7 +67,7 @@ const resolvers = {
           { new: true }
         );
 
-        return thought;
+        return show;
       }
 
       throw new AuthenticationError('You need to be logged in!');

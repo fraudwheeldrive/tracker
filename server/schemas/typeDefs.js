@@ -13,9 +13,9 @@ const typeDefs = gql`
 
   type Show {
     _id: ID
-    thoughtText: String
-    createdAt: String
-    username: String
+    image: String
+    overview: String
+    name: String
   }
 
   type Auth {

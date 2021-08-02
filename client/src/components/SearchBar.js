@@ -13,6 +13,9 @@ import { saveShow, SearchShowsApi } from "../utils/api";
 import { saveShowIds, getSavedShowIds } from "../utils/GlobalState";
 import Container from "react-bootstrap/Container";
 import WishList from './WishList';
+import { useMutation, useQuery } from '@apollo/client';
+
+
 
 
 const SearchBar = () => {
@@ -25,7 +28,7 @@ const SearchBar = () => {
 
 
   const handleSaveItem = async (movieId) => {
-    const movieToSave = searchedMovies.find((movie) => movie.movieId === movieId);
+    const movieToSave = searchedShows.find((movie) => movie.movieId === movieId);
 
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -34,15 +37,15 @@ const SearchBar = () => {
     }
 
     try {
-      await saveBook({
+      await saveShow({
         variables: {
-          name: show.name,
-          image: "http://image.tmdb.org/t/p/w200" + show.poster_path,
-          overview: show.overview,
+          name: movieToSave.name,
+          image: "http://image.tmdb.org/t/p/w200" + movieToSave.poster_path,
+          overview: movieToSave.overview,
         }
       })
 
-      setSavedmovieIds([...savedmovieIds, movieToSave.movieId]);
+      getSavedShowIds([...saveShowIds, movieToSave.movieId]);
     } catch (err) {
       console.error(err);
     }
@@ -123,7 +126,7 @@ const SearchBar = () => {
                     {Auth.loggedIn() && (
                       <Button
                        variant="primary"
-                       handleAddClick={handleAdd}
+                      //  handleAddClick={handleAdd}
                        addtolistcomponent={WishList}
                        
                        >

@@ -25,9 +25,9 @@ const SavedItems = () => {
   const userData = data?.me || {};
   const [addItem] = useMutation(SAVE_ITEM);
 
-  // const [searchedShows, setSearchedShows] = useState([]);
-  // const [searchInput, setSearchInput] = useState();
-  // const [savedShowIds, setSavedShowIds] = useState(getSavedShowIds());
+  const [searchedShows, setSearchedShows] = useState([]);
+  const [searchInput, setSearchInput] = useState();
+  const [savedShowIds, setSavedShowIds] = useState(getSavedShowIds());
 
   const handleDeleteBook = async (movieId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -64,12 +64,13 @@ const SavedItems = () => {
             : 'You have no saved items!'}
         </h2>
         <CardColumns>
-          {userData.SavedItems.map((shows) => {
+          {userData.SavedItems.map((show) => {
 
             return (
 
               <Card key={show.movieId}>
-                {show.image ? <Card.Img src={show.image} /> : null}
+                {show.image ? 
+                <Card.Img src={show.image} /> : null}
                 <Card.Body>
                   <Card.Title>{show.name}</Card.Title>
                   <p className='small'>Overview </p>
