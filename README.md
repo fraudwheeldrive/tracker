@@ -8,16 +8,17 @@
 ## Description
 Pocket.io is a movie tracker app which is built using React, mongoDB. This web app uses the Movie API to display the movie overviews.
 
-* User can sign up [Sign-Up] (https://w4tch-tow3r.herokuapp.com/SignUp)
-* User can log in [Log-in] (https://w4tch-tow3r.herokuapp.com/LogIn)
-* User can access the premium feature [Go-Premium] (https://w4tch-tow3r.herokuapp.com/GoPremium)
-* User can search for any movie on the search tab [Search](
-https://w4tch-tow3r.herokuapp.com/Search)
+* User can sign up [Sign-Up](https://w4tch-tow3r.herokuapp.com/SignUp)
+* User can log in [Log-in](https://w4tch-tow3r.herokuapp.com/LogIn)
+* User can access the premium feature [Go-Premium](https://w4tch-tow3r.herokuapp.com/GoPremium)
+* User can search for any movie on the search tab [Search](https://w4tch-tow3r.herokuapp.com/Search)
 * User can get a notification for the upcoming movies too [Movie-List](https://w4tch-tow3r.herokuapp.com/MyLists)
 
 Project by: Andrew Core, Deja Martin, Aimee Jesso, Jagraj Singh  
 Main Github: 
+[fraudwheeldrive](https://github.com/fraudwheeldrive)
 [MissAimeeJay](https://github.com/MissAimeeJay)
+
 Repository Link: https://github.com/fraudwheeldrive/tracker  
 Live Page Url:  https://w4tch-tow3r.herokuapp.com/
 
@@ -40,13 +41,10 @@ This app is available from the Heroku link listed above.  If the repository view
 4. The should automatically open at http://localhost:3000
 
 ## Contribution   `To be filled in by Jagraj`
-fraudwheeldrive  
-[https://github.com/fraudwheeldrive](https://github.com/fraudwheeldrive)
-https://github.com/MissAimeeJay
-Deja Martin
-https://github.com/dejagraver
-Jagraj Singh
-https://github.com/ITJagraj
+[Andrew Core]([https://github.com/fraudwheeldrive)
+[Aimee Jesso](https://github.com/MissAimeeJay)
+[Deja Martin](https://github.com/dejagraver)
+[Jagraj Singh](https://github.com/ITJagraj)
 
 ## License
 The Unlicense
